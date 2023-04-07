@@ -12,7 +12,7 @@
             Console.WriteLine($"Codice: {product1.GetCode()}");
 
             //Print Price
-            product1.SetPrice(10);
+            product1.SetPrice(Convert.ToInt32(Console.ReadLine()));
             Console.WriteLine($"Prezzo: {product1.GetPrice()}$");
 
             //Print Iva Price
@@ -20,6 +20,8 @@
             Console.WriteLine($"Prezzo IVA: {product1.GetIvaPrice()}$");
 
 
+            product1.SetName(Console.ReadLine());
+            Console.WriteLine($"Nome: {product1.GetName()}");
 
         }
             

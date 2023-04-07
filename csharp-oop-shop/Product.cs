@@ -19,10 +19,10 @@ namespace csharp_oop_shop
         public Product()
         {
             codice = GenerateRandomNumber();
-            nome = "****";
+            nome = NameMoreCode(nome, codice);
             descrizione = "**** ****";
             prezzo = GetPrice();
-            prezzoIva = GetPriceMoreIva(prezzo);   
+            prezzoIva = PriceMoreIva(prezzo);   
             
         }
 
@@ -42,7 +42,7 @@ namespace csharp_oop_shop
         }
 
         //Price
-        private float GetPriceMoreIva(float prezzo)
+        private float PriceMoreIva(float prezzo)
         {
             float iva = 0.22f;
             float prezzoIva = (prezzo * iva) + prezzo; 
@@ -50,7 +50,13 @@ namespace csharp_oop_shop
             return prezzoIva;
         }
 
+        //Name
+        private string NameMoreCode(string name, int code)
+        {
+            string codiceStringa = Convert.ToString(code);
 
+            return codiceStringa + name;
+        }
 
 
 
@@ -77,12 +83,20 @@ namespace csharp_oop_shop
         //(Get/Set) IVA Price
         public float GetIvaPrice()
         {
-            return GetPriceMoreIva(prezzo);
+            return PriceMoreIva(prezzo);
         }
         //public void SetIvaPrice(float prezzoIva)
         //{
         //    this.prezzoIva = prezzoIva;
         //}
 
+        public string GetName()
+        {
+            return NameMoreCode(nome, codice);
+        }
+        public void SetName(string name)
+        {
+            this.nome = name;
+        }
     }
 }
