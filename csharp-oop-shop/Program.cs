@@ -12,19 +12,26 @@
             Console.WriteLine($"Codice: {product1.GetCode()}");
 
             //Print Price
+            Console.WriteLine("Set Price: ");
             product1.SetPrice(Convert.ToInt32(Console.ReadLine()));
             Console.WriteLine($"Prezzo: {product1.GetPrice()}$");
 
             //Print Iva Price
-            //product1.SetIvaPrice(3);
             Console.WriteLine($"Prezzo IVA: {product1.GetIvaPrice()}$");
 
 
+            //Set Name
             product1.SetName(Console.ReadLine());
-            Console.WriteLine($"Nome: {product1.GetName()}");
+
+            //product1.NameMoreCode(Console.ReadLine());
+            Console.WriteLine($"Nome: {product1.NameMoreCode(product1.nome, product1.GetCode())}");
+
+
+            Console.WriteLine(product1.nome);
+            Console.WriteLine(product1.prezzo);
 
         }
-            
+
 
     }
 }
