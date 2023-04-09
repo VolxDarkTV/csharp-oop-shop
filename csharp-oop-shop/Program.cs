@@ -21,12 +21,14 @@
 
 
             //Set Name
+            Console.WriteLine("Set Name: ");
             product1.SetName(Console.ReadLine());
 
             //product1.NameMoreCode(Console.ReadLine());
             Console.WriteLine($"Nome: {product1.NameMoreCode(product1.nome, product1.GetCode())}");
 
 
+            //TEST
             Console.WriteLine(product1.nome);
             Console.WriteLine(product1.prezzo);
 
